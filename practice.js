@@ -20,7 +20,7 @@ var lovesCode = true
 
 //Create a variable called greatestFear that is undefined because we fear nothing
 
-var greatestFear 
+var greatestFear = undefined 
 
 //////////////////PROBLEM 5////////////////////
 
@@ -45,7 +45,7 @@ function greeting(name) {
 //Rewrite the function greeting as a function expression.
 //Name it newGreeting.
 
-var newGreeting = function greeting(name) {
+var newGreeting = function (name) {
   return "Hello, " + name
 }
 
@@ -54,9 +54,21 @@ var newGreeting = function greeting(name) {
 //Rewrite the function greeting as an arrow function.
 //Name it finalGreeting.
 
-var finalGreeting = greeting() => {
+// WITHOUT ARROW FUNCTION 
+// function finalGreeting(name){
+//   return "Hello, " + name
+// }
+
+finalGreeting = (name) => {
   return "Hello, " + name
 }
+
+/* nameOfFunction = (parameter) => {
+  return WHATEVER
+}
+*/
+
+
 
 //////////////////PROBLEM 9////////////////////
 
@@ -72,12 +84,17 @@ var groceries = ["apples", "milk", "eggs", "bread"];
 //name (a string), color (a string), age (a number),
 //and goodBoy (a boolean).
 
-var dog = {name: "Batman", color: "white", age = 0.4, goodBoy = true};
+var dog = {
+  name: "Batman",
+  color: "White",
+  age: 1, 
+  goodBoy: true 
+}
 
 //...access the dog's name from the object and assign it to a
-//variable called devMountainClassPet.
+//variable called devMountain ClassPet.
 
-var devMountainClassPet = dog;
+var devMountainClassPet = dog.name;
 
 //////////////////PROBLEM 11////////////////////
 
@@ -92,11 +109,12 @@ function nameCheck(name) {
   if (name === 'Steven') {
     return 'What is up Steven?'
   }
-  if (name === Bryan) {
+  else if (name === 'Bryan') {
     return 'Hey Bryan!'
   }
   else {
-    return 'Cool name, NAMEPARAM'
+    // return 'Cool name, + name'
+    return 'Cool name, ' + name
   }
   
 }
@@ -162,16 +180,16 @@ function pond() {
 //as strings.
 
 //This array should contain the variable names (as strings) accessible in the global scope.
-let globalScope = ["duck", "sailorDuck", "rubberDuck", "realDuck"];
+let globalScope = ["duck" /*, "sailorDuck", "rubberDuck", "realDuck"*/];
 
 //This array should contain the variable names (as strings) accessible in the bathroom function.
-let bathroomScope = ["duck", "sailorDuck", "rubberDuck", "realDuck"];
+let bathroomScope = ["duck", /*"sailorDuck", */"rubberDuck", /*"realDuck"*/];
 
 //This array should contain the variable names (as strings) accessible in the bathtub function.
-let bathtubScope = ["duck", "sailorDuck", "rubberDuck", "realDuck"];
+let bathtubScope = ["duck", "sailorDuck", "rubberDuck", /*"realDuck"*/];
 
 //This array should contain the variable names (as strings) accessible in the pond function.
-let pondScope = ["duck", "sailorDuck", "rubberDuck", "realDuck"];
+let pondScope = ["duck", /*"sailorDuck", "rubberDuck", */"realDuck"];
 
 //////////////////PROBLEM 15////////////////////
 
